@@ -1,20 +1,35 @@
-# ForumHub
+# forum_hub
+Challenge de Backend - Oracle Next Education
+# Forum Hub - Oracle Next Education
 
-## Descrição
-    Projeto criado como um challenger da formação spring para a turma do ONE (oracle next education)
+## Objetivo
+Desenvolver uma API Rest para um sistema de forum.
 
-## Dependências
-    - Necessario possuir o Java instalado
-    - Necessario possuir o Mysql instalado
+## Sobre o projeto
+Projeto reproduzido para fins didáticos durante a ultima fase do Programa ONE.
+O Projeto foi desenvolvido usando o SpringBoot 3, Flyway para controle das migrations, MySQL como banco de dados e documentado com OpenAPI
 
-## Tecnologias utilizadas
-    - Java 17
-    - Spring boot 3.3.0
-    - Mysql
+## Capacidades da aplicação
 
-## Como utilizar
+- Total gerenciamento de contas
+  - Criar contas de usuário padrão através da rota /cadastro
+  - Administração das contas através da rota de /usuario
+  - Possui 3 perfils de usuário: Administrador, Moderador e Usuário
+- Gerenciamento de cursos
+  - Criar, Atualizar, Excluir e Alterar (Administradores)
+- Gerenciamento de tópicos
+  - Criar, Atualizar, Excluir, Alterar, Listagem única e geral dos tópicos, Responder a tópicos
+- Gerenciamento de respostas
+  - Criar, Atualizar, Excluir, Alterar, Listagem única, Marcar resposta como solução do tópico
 
-- No terminal clone o projeto
-- Crie um banco de dados com o nome "forumhub"
-- Crie uma variavel de ambiente com o nome `JWT_SECRET`
-- Agora basta rodar dentro da IDE a classe ForumHubApplication
+Dentro das capacidades da aplicação, a depender do nivel de acesso do usuário ele terá ou não permissão de remover itens, alterar e etc.
+
+## Variáveis de ambiente
+Para iniciar o projeto em seu ambiente local é preciso configurar as seguintes variáveis de ambiente:
+
+- DB_URL - ex.: jdbc:mysql://localhost:3306/forum_hub
+- DB_USER - ex.: root
+- DB_PASSWORD - ex.: 12345678
+- JWT_SECRET - ex.: esse-e-um-secret
+
+Caso as configurções padrões sejam as mesmas que for usar, não é preciso configurar nada.
